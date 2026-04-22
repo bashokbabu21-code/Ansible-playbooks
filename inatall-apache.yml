@@ -1,0 +1,14 @@
+---
+- name: Install apache
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name: Install apache
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+...
