@@ -1,0 +1,14 @@
+---
+- name: creare a user 
+  hosts: webservers
+  become: yes  
+  tasks:
+    - name: create user
+      user:
+        name: ashok-test
+        password: 123
+        home: /home/ashok-test
+        uid: 9090
+        shell: /bin/bash
+        comment: /"normal user"
+...
