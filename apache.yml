@@ -1,17 +1,17 @@
 ---
-- name: Install Apache
+- name: Install tree
   hosts: all
   become: yes
 
   tasks:
-    - name: Install httpd
+    - name: Install tree
       apt:
-        name: httpd
+        name: tree
         state: present
 
     - name: Start service
       service:
-        name: httpd
+        name: tree
         state: started
         enabled: yes
 ...          
